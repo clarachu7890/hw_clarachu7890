@@ -37,8 +37,6 @@ bool helper (stringstream &input, int len)
 	{
 		return false;
 	}
-	if (val) return true;
-	return false;
 }
 
 //do not change the main function.
