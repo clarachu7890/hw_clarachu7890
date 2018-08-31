@@ -1,1 +1,49 @@
+Problem 1:
+Part (a):
+Which of the following are acceptable behaviors in solving homeworks/projects?
 
+Looking up information relevant to the course online.
+Asking the course staff for help.
+
+Part (b):
+Which of the following are recommended ways of writing code?
+
+emacs
+Eclipse
+sublime
+Microsoft Visual Studio
+
+Part(c):
+What is the late submission policy?
+
+Each student has 3 late days of which only one can be used per HW.
+(Students need to get approval before submitting an assignment late.) idk if this is right?
+
+Part(d):
+After making a late submission by pushing your code to Gihub you should...
+
+Complete the normal homework submission form.
+Start the next assignment sooner.
+
+Problem 2:
+Part (a):
+Which of the following git user interfaces are accepted and supported in this course?
+
+Git Bash (Windows)
+GitHub Desktop Client
+Terminal (Mac or Linux)
+Eclipse eGit
+Tower Git Client
+
+Part (b):
+Provide the appropriate git command to perform the following operations:
+
+Stage an untracked file to be committed. The (hypothetical) file is called 'hw1q2b.cpp'.
+
+Display the details of the last three commits in the repository.
+Part (c)
+Let's say you staged three files to be committed. Then, you ran the following command:
+
+git commit
+
+What will git do?
