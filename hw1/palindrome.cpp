@@ -29,8 +29,7 @@ bool helper (stringstream &input, int len)
 	// the above function only indicates what letter is in the middle
 	char last;
 	input >> last;
-	if (prev==last) //try to check to see if the things left of the middle is equal to thing in the front equal to the 
-	{
+	if (val && prev==last){
 		return true;
 	}
 	else 
