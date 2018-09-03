@@ -2,28 +2,29 @@ Problem 1:
 Part (a):
 Which of the following are acceptable behaviors in solving homeworks/projects?
 
-Looking up information relevant to the course online.
-Asking the course staff for help.
+1)Looking up information relevant to the course online.
+4)Asking the course staff for help.
+8)Copying test cases from my classmates or Piazza when test cases are not graded.
 
 Part (b):
 Which of the following are recommended ways of writing code?
 
-emacs
-Eclipse
-sublime
-Microsoft Visual Studio
+2)emacs
+3)Eclipse
+4)sublime
+5)Microsoft Visual Studio
 
 Part(c):
 What is the late submission policy?
 
-Each student has 3 late days of which only one can be used per HW.
+2)Each student has 3 late days of which only one can be used per HW.
 (Students need to get approval before submitting an assignment late.) idk if this is right?
 
 Part(d):
 After making a late submission by pushing your code to Gihub you should...
 
-Complete the normal homework submission form.
-Start the next assignment sooner.
+2)Complete the normal homework submission form.
+4)Start the next assignment sooner.
 
 Problem 2:
 Part (a):
@@ -39,11 +40,16 @@ Part (b):
 Provide the appropriate git command to perform the following operations:
 
 Stage an untracked file to be committed. The (hypothetical) file is called 'hw1q2b.cpp'.
+git add hw1q2b.cpp
+git commit -m "message"
 
 Display the details of the last three commits in the repository.
+git log or git log --pretty=oneline
+
 Part (c)
 Let's say you staged three files to be committed. Then, you ran the following command:
 
 git commit
 
 What will git do?
+If there are no files added then git commit will do nothing cause there is nothing to commit. Because each commit must have a message with it git will prompt us for a messageusing the editor. If you do not wrote a message using -m or the editor then the command will fail.

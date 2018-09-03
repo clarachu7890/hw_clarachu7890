@@ -4,6 +4,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+   int number;
    string word;
 
    if(argc<1)// no file name
@@ -15,12 +16,27 @@ int main(int argc, char const *argv[])
    {
       return 1;
    }
-   for (int i=0; i<10; i++)
+
+   wordFile >> number;
+   if (number<1)
+   {
+      return 0;
+   }
+   string *words= NULL;
+   words=new string [number];
+
+   for (int i=0; i <number; i++)
    {
       wordFile >> word;
-      cout << word << endl;
+      words[i]= word;
    }
+   for (int i = number; i >= 0; i--)
+   {
+      cout << words[i] << endl;
+   }
+      delete [] words;
    
+   words=NULL;
    wordFile.close();
 
    return 0;
