@@ -52,4 +52,4 @@ Let's say you staged three files to be committed. Then, you ran the following co
 git commit
 
 What will git do?
-If there are no files added then git commit will do nothing cause there is nothing to commit. Because each commit must have a message with it git will prompt us for a messageusing the editor. If you do not wrote a message using -m or the editor then the command will fail.
+If the three files were not added then then git commit will do nothing cause there is nothing to commit. Because each commit must have a message with it git will prompt us for a messageusing the editor. If you do not wrote a message using -m or the editor then the command will fail.

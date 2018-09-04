@@ -1,49 +1,47 @@
 #include <cstddef>
+#include <iostream>
 #include "simpleCharManager.h"
 
 
 
+using namespace std;
 simpleCharManager::simpleCharManager(){
-
+	for (int i = 0; i < BUF_SIZE; i++)
+		{
+			buffer[i]='\0';
+		}
+	 free_place=&buffer[0];
 }
 
 simpleCharManager::~simpleCharManager(){}
              
 char* simpleCharManager::alloc_chars(int n){
-	char buffer [BUF_SIZE];
+	char* p=NULL;
+
 	for(int i=0; i<BUF_SIZE;i++)
 	{
-		(buffer[0]+*8)
+		if(free_place==&buffer[i])
 		{
-			*p = buffer[i];
-			*free_place= buffer[i];
-
-			for (int j = 0; j < n ; j++)
-			{
-				if(buffer[i+j]==NULL)
-				{
-					free_place++;
-					size++;
-				}
-			}
+			p=free_place;
+			free_place=free_place+n;
+			return p;
 		}
-		return p;
 	}
-
-
         return NULL;
 }
 
 void simpleCharManager::free_chars(char* p){
-	for (int i = 0; i < count; ++i)
+	free_place=p;
+	for (int i = 0; i < BUF_SIZE; i++)
 	{
-		if(*p==buffer[i])
+		if(p==&buffer[i])
 		{
 			for (int j = i; j < BUF_SIZE-i; j++)
 			{
-				buffer[j]=NULL;
+				buffer[j]='\0';
+				//size--;
 			}
 		}
 	}
+}
 
-}         
