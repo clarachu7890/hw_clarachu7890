@@ -10,19 +10,24 @@ simpleCharManager::simpleCharManager(){
 simpleCharManager::~simpleCharManager(){}
              
 char* simpleCharManager::alloc_chars(int n){
-	char buffer [10000];
-	char* p=NULL;
-	for (int i=0, i< 10000, i++)
+	char buffer [BUF_SIZE];
+	for(int i=0; i<BUF_SIZE;i++)
 	{
-		buffer[i]=NULL;
-	}
-	for(int i=0, i<10000,i++)
-	{
-		if (buffer[i]=NULL)
+		(buffer[0]+*8)
 		{
-			
+			*p = buffer[i];
+			*free_place= buffer[i];
+
+			for (int j = 0; j < n ; j++)
+			{
+				if(buffer[i+j]==NULL)
+				{
+					free_place++;
+					size++;
+				}
+			}
 		}
-		buffer[i]
+		return p;
 	}
 
 
@@ -30,5 +35,15 @@ char* simpleCharManager::alloc_chars(int n){
 }
 
 void simpleCharManager::free_chars(char* p){
+	for (int i = 0; i < count; ++i)
+	{
+		if(*p==buffer[i])
+		{
+			for (int j = i; j < BUF_SIZE-i; j++)
+			{
+				buffer[j]=NULL;
+			}
+		}
+	}
 
 }         
